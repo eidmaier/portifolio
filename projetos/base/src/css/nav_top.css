@@ -1,0 +1,51 @@
+
+
+/* -----------------------------
+        LINKS NAV-TOP
+----------------------------- */
+/* Estilo básico para o link */
+.links-navtop {
+    text-decoration: none; /* Remove o sublinhado */
+    color: black; /* Cor inicial do link */
+    font-size: 14px; /* Tamanho da fonte */
+    transition: color 0.3s ease; /* Transição suave da cor */
+    margin: 10px;
+}
+
+/* Estilo para o link ao passar o mouse */
+.links-navtop:hover {
+    color: #00d1ff; /* Cor ao passar o mouse */
+    transition: color 0.3s ease; /* Transição suave */
+}
+
+/* -----------------------------
+    ÍCONES REDES SOCIAIS
+----------------------------- */
+
+.socicons,
+.logon {
+    display: flex;
+    flex-direction: row;
+    justify-content:end;
+    align-items: end;
+    /* Alinha os ícones verticalmente */
+    flex: 0 0 15%;
+    text-align: end;
+    font-size: 10px;
+}
+
+.socicons a {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    /* Tamanho inicial dos ícones */
+    transition: color 0.3s;
+    margin: 0 5px;
+    /* Adiciona margem horizontal aos ícones */
+    font-size: 14px;
+}
+
+.socicons a:hover {
+    color: #00d1ff;
+    /* Cor ao passar o mouse */
+}
+

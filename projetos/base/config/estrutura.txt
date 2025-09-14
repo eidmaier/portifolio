@@ -1,0 +1,31 @@
+base
+   └── .gitignore
+   └── .htaccess
+   └── add_header.py
+   └── COMMANDS.md
+   └── export_cods.js
+   └── index.html
+   └── index.php
+    .vscode
+       └── router.php
+       └── tasks.json
+    config
+       └── estrutura.txt
+       └── treecods_export.py
+    css
+       └── style.css
+    imgs
+    js
+       └── script.js
+    md
+       └── add_header.md
+       └── LICENSE.md
+       └── README.md
+       └── treecods_export.md
+    public
+    src
+       └── arquivo.js
+        models
+        views
+           └── home.php
+   └── venv

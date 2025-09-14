@@ -1,0 +1,134 @@
+/* css\header.css */
+
+/* ==============================
+        LAYOUT do HEADER
+         vide DEFINIÇÕES
+============================== */
+/* header {
+    display: flex;
+} */
+
+/* Container principal do header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+/* Logo */
+.logo {
+    flex: 0 0 auto; /* A logo não vai se expandir, só ocupa o espaço necessário */
+    margin-right: 40px;
+}
+
+#logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+/* -----------------------------
+            LOGO
+----------------------------- */
+/* Definindo a fonte personalizada */
+/* Definindo a fonte personalizada */
+@font-face {
+    font-family: 'Researcher';
+    src: url('../fonts/ttf/researcher-researcher-regular-400.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilo para a logo com a fonte personalizada */
+#logo-text {
+    font-family: 'Researcher', sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    color: #333;
+    text-decoration: none; /* Remove o sublinhado no link */
+}
+
+/* Removendo o sublinhado no link */
+a {
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+/* Caso o link precise de algum efeito visual */
+#logo-text:hover {
+    color: #00d1ff;  /* Cor ao passar o mouse */
+}
+
+
+/* -----------------------------
+            SEARCH
+    vide CONTEÚDO DO HEADR      
+----------------------------- */
+.search {
+    flex: 0 0 55%;
+    text-align: end;
+}
+
+
+
+/* Estilos para telas entre 520px e 768px */
+@media (max-width: 768px) and (min-width: 521px) {
+    .logo {
+        flex: 0 0 20%;
+    }
+
+    .search {
+        flex: 0 0 40%;
+    }
+}
+
+/* Estilos para telas menores que 520px */
+@media (max-width: 520px) {
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .logo
+    {
+        flex: 0 0 33.33%;
+    }
+
+    .search {
+        flex: 0 0 100%;
+        order: 1;
+        margin-top: 5px;
+    }
+}
+
+/* Estilos para telas menores que 320px */
+@media (max-width: 320px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .logo,
+    .search
+ {
+        flex: 0 0 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* ==============================
+           DEFINIÇÕES
+============================== */
+
+/** 
+A propriedade flex: 0 0 100% é uma forma abreviada de definir três valores para o modelo flexbox:
+
+flex-grow (0): Este valor indica que o item não pode crescer. Ou seja, mesmo que haja espaço disponível no contêiner, o item não ocupará mais espaço do que o definido.
+
+flex-shrink (0): Este valor indica que o item não pode encolher. Se o contêiner tiver espaço reduzido, o item não diminuirá seu tamanho.
+
+flex-basis (100%): Este valor define o tamanho inicial do item. Neste caso, o item começará ocupando 100% da largura do contêiner.
+
+Portanto, flex: 0 0 100% significa que o item não crescerá nem encolherá e ocupará sempre 100% da largura disponível no contêiner pai. Isso é útil em layouts responsivos, especialmente quando você quer que cada item ocupe toda a largura disponível em telas menores.
+*/

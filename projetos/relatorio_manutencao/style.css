@@ -1,0 +1,130 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #ececec;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.post {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.post h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.post-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    width: 48%;
+}
+
+.column h3 {
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dados-cliente {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    gap: 10px;   
+    margin-bottom: 15px;
+
+}
+
+main {
+    margin-bottom: 30px;
+}
+
+input {
+    border: none; /* Remove a borda */
+    background-color: transparent; /* Torna o fundo transparente */
+    outline: none; /* Remove a borda ao focar */
+    padding: 0; /* Adiciona um pouco de espaço interno */
+    font-size: 16px; /* Ajusta o tamanho da fonte */
+}
+
+.ass {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-self: center;
+    margin-top: 40px;
+}
+footer {
+    background-color: #ececec;
+    padding: 10px;
+}
+
+footer span {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .post-content {
+        flex-direction: column;
+    }
+    
+    .column {
+        width: 100%;
+    }
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}

@@ -1,0 +1,23 @@
+# Arquivos de compilação
+*.o
+*.out
+*.exe
+
+# Arquivos de configuração de IDEs
+.vscode/
+.idea/
+
+# Arquivos temporários
+*.tmp
+*.bak
+
+# Dependências e módulos gerados
+node_modules/
+vendor/
+venv/
+
+# Arquivos de log
+*.log
+
+# Arquivos de cache
+.cache/

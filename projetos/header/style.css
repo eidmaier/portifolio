@@ -1,0 +1,507 @@
+/* Aplicar box-sizing a todos os elementos para facilitar o cálculo de largura e altura */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos gerais do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* ==============================
+        LAYOUT do HEADER
+         vide DEFINIÇÕES
+============================== */
+.header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 10px;
+    background-color: #033747;
+}
+
+/* -----------------------------
+            LOGO
+----------------------------- */
+.logo {
+    flex: 0 0 15%;
+    text-align: center;
+}
+
+#logo {
+    width: 100%;
+    height: 70px;
+    object-fit: contain;
+}
+
+/* -----------------------------
+            SEARCH
+    vide CONTEÚDO DO HEADR      
+----------------------------- */
+.search {
+    flex: 0 0 55%;
+    text-align: center;
+}
+
+/* -----------------------------
+    ÍCONES REDES SOCIAIS
+----------------------------- */
+.socicons,
+.logon {
+    display: flex;
+    justify-content: space-evenly;
+    /* Distribui os ícones com espaço entre eles */
+    align-items: center;
+    /* Alinha os ícones verticalmente */
+    flex: 0 0 15%;
+    text-align: center;
+    font-size: 10px;
+}
+
+.socicons a {
+    color: white;
+    font-size: 24px;
+    /* Tamanho inicial dos ícones */
+    transition: color 0.3s;
+    margin: 0 5px;
+    /* Adiciona margem horizontal aos ícones */
+    font-size: 14px;
+}
+
+.socicons a:hover {
+    color: #00d1ff;
+    /* Cor ao passar o mouse */
+}
+
+/* -----------------------------
+            LOGON
+----------------------------- */
+
+.logon a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    /* Tamanho do texto */
+}
+
+/* Estilos para telas entre 520px e 768px */
+@media (max-width: 768px) and (min-width: 521px) {
+    .logo {
+        flex: 0 0 20%;
+    }
+
+    .search {
+        flex: 0 0 40%;
+    }
+
+    .socicons,
+    .logon {
+        flex: 0 0 20%;
+    }
+
+    .socicons a {
+        font-size: 20px;
+        /* Reduz o tamanho dos ícones */
+    }
+}
+
+/* Estilos para telas menores que 520px */
+@media (max-width: 520px) {
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .logo,
+    .socicons,
+    .logon {
+        flex: 0 0 33.33%;
+    }
+
+    .search {
+        flex: 0 0 100%;
+        order: 1;
+        margin-top: 5px;
+    }
+
+    .socicons a {
+        font-size: 14px;
+        /* Reduz o tamanho dos ícones */
+    }
+}
+
+/* Estilos para telas menores que 320px */
+@media (max-width: 320px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .logo,
+    .search,
+    .socicons,
+    .logon {
+        flex: 0 0 100%;
+        margin-bottom: 10px;
+    }
+
+    .socicons a {
+        font-size: 14px;
+        /* Reduz o tamanho dos ícones ainda mais */
+    }
+}
+
+/* ==============================
+        CONTEÚDO do HEADER
+============================== */
+
+/* -----------------------------
+            SEARCH
+----------------------------- */
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para a caixa de pesquisa */
+.search-box {
+    margin-top: auto;
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* Campo de pesquisa */
+#search-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* Alinha itens verticalmente no centro */
+    width: 100%;
+    /* Garante que o formulário use a largura disponível */
+}
+
+.search-input {
+    flex: 1;
+    /* Faz com que o input ocupe o espaço disponível */
+    border: 2px solid green;
+    border-radius: 30px;
+    outline: none;
+    width: 70%;
+    height: 45px;
+    /* Ajusta a altura do campo de pesquisa */
+    padding: 0 10px;
+    /* Ajusta o padding para melhorar o layout */
+    margin-right: 10px;
+    box-sizing: border-box;
+    /* Inclui padding e border no tamanho total do elemento */
+}
+
+/* Botões de pesquisa */
+.search-buttons {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    /* Permite que os botões quebrem para a linha seguinte se necessário */
+}
+
+/* Estilo para o botão "x" */
+.clear-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 18px;
+    /* Ajuste o tamanho do ícone se necessário */
+}
+
+.search-button,
+.clear-button,
+.keyboard-button,
+.audio-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 15px;
+    /* Ajuste o tamanho do ícone se necessário */
+}
+
+.search-button:hover,
+.clear-button:hover,
+.keyboard-button:hover,
+.audio-button:hover {
+    background-color: #00aeff;
+    border-radius: 5px;
+}
+
+/* -----------------------------
+        TECLADO VIRTUAL
+---------------------------- **/
+
+/* Estilo para o contêiner da página */
+/* .container-virtual-keyboard {
+    width: 40%;
+    margin: 0 auto;
+  } */
+
+/* Estilos para o teclado virtual */
+#virtual-keyboard {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #383737;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.virtual-keyboard .row {
+    margin-bottom: 5px;
+}
+
+.virtual-keyboard button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.virtual-keyboard button:active {
+    background-color: #ccc;
+}
+
+.virtual-keyboard button:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* Estilos para os resultados da pesquisa */
+#search-results {
+    margin-top: 20px;
+}
+
+.result-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+}
+
+.result-item a {
+    color: #000;
+    text-decoration: none;
+}
+
+.result-item a:hover {
+    text-decoration: underline;
+}
+
+.result-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.result-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.result-url {
+    font-size: 12px;
+    color: #006621;
+}
+
+.result-type {
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .search-box {
+        width: 100%;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .search-buttons {
+        margin: 10px 0;
+    }
+
+    .search-button,
+    .clear-button,
+    .keyboard-button,
+    .audio-button {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-box {
+        width: 100%;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .search-buttons {
+        margin: 10px 0;
+    }
+
+    .search-button,
+    .clear-button,
+    .keyboard-button,
+    .audio-button {
+        font-size: 10px;
+    }
+}
+
+/* Ajustes para telas muito menores */
+@media (max-width: 320px) {
+    .search-box {
+        width: 100%;
+    }
+
+    .search-input {
+        min-width: 100%;
+        /* Ajusta a largura do campo de pesquisa */
+    }
+
+    .search-buttons {
+        flex-direction: row;
+        /* Empilha os botões verticalmente a partir de 320px */
+        flex-wrap: wrap;
+        align-items: flex-start;
+        /* Alinha os botões ao início do contêiner */
+    }
+
+    .search-button,
+    .clear-button,
+    .keyboard-button,
+    .audio-button {
+        font-size: 10px;
+        /* Ajusta o tamanho da fonte dos botões */
+    }
+}
+
+/* -----------------------------
+   RESULTADO DE PESQUISA
+---------------------------- **/
+.container-search {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.search-results {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-image {
+    width: 120px;
+    /* Ajuste o tamanho da imagem */
+    height: auto;
+    /* Mantém a proporção da imagem */
+}
+
+.card-content {
+    padding: 10px;
+
+}
+
+.card-content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-link {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    /* Alinha verticalmente a imagem e o texto */
+}
+
+.card-link h2 {
+    font-size: 1em;
+    /* Ajuste do tamanho do título */
+    margin: 0;
+}
+
+.card-link p {
+    margin: 5px 0;
+    /* Espaçamento entre parágrafos */
+    font-size: 0.9em;
+    /* Ajuste do tamanho da descrição */
+}
+
+@media (max-width: 320px) {
+    .search-card {
+        flex-direction: column;
+        /* Muda a direção para coluna em telas menores */
+        align-items: center;
+        /* Alinha os itens ao centro */
+    }
+
+    .card-image {
+        margin-bottom: 10px;
+        /* Espaçamento entre a imagem e o texto */
+    }
+
+    .card-content {
+        padding: 0;
+        /* Remove o padding para que o texto fique mais próximo da imagem */
+    }
+
+    .card-link {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+/* ==============================
+           DEFINIÇÕES
+============================== */
+
+/** 
+A propriedade flex: 0 0 100% é uma forma abreviada de definir três valores para o modelo flexbox:
+
+flex-grow (0): Este valor indica que o item não pode crescer. Ou seja, mesmo que haja espaço disponível no contêiner, o item não ocupará mais espaço do que o definido.
+
+flex-shrink (0): Este valor indica que o item não pode encolher. Se o contêiner tiver espaço reduzido, o item não diminuirá seu tamanho.
+
+flex-basis (100%): Este valor define o tamanho inicial do item. Neste caso, o item começará ocupando 100% da largura do contêiner.
+
+Portanto, flex: 0 0 100% significa que o item não crescerá nem encolherá e ocupará sempre 100% da largura disponível no contêiner pai. Isso é útil em layouts responsivos, especialmente quando você quer que cada item ocupe toda a largura disponível em telas menores.
+*/

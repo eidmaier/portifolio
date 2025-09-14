@@ -1,0 +1,24 @@
+<?php
+require_once 'db.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $cliente_id = isset($_POST['cliente_id']) ? intval($_POST['cliente_id']) : null;
+    $nome = $_POST['cliente'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+    $assunto = $_POST['assunto'];
+    $prestador_servico = $_POST['prestador_servico'];
+    $profissao = $_POST['profissao'];
+
+    if ($cliente_id) {
+        $stmt = $pdo->prepare("UPDATE clientes SET nome = ?, email = ?, telefone = ?, assunto = ?, prestador_servico = ?, profissao = ? WHERE id = ?");
+        $stmt->execute([$nome, $email, $telefone, $assunto, $prestador_servico, $profissao, $cliente_id]);
+    } else {
+        $stmt = $pdo->prepare("INSERT INTO clientes (nome, email, telefone, assunto, prestador_servico, profissao) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->execute([$nome, $email, $telefone, $assunto, $prestador_servico, $profissao]);
+        $cliente_id = $pdo->lastInsertId();
+    }
+
+    header("Location: index.php?cliente_id=" . $cliente_id);
+    exit;
+}

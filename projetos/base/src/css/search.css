@@ -1,0 +1,220 @@
+
+/* PESQUISA **/
+
+/* Estilo para a caixa de pesquisa */
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: auto;
+    width: 70%;
+    height: auto;
+    /* border: 3px solid #5804f5; */
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* Campo de pesquisa */
+#search-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Alinha itens verticalmente no centro */
+    width: 100%; /* Garante que o formulário use a largura disponível */
+}
+
+.search-input {
+    flex: 1; /* Faz com que o input ocupe o espaço disponível */
+    border: 2px solid #00d1ff;
+    border-radius: 20px;
+    outline: none;
+    width: 400px;
+    height: 45px; /* Ajusta a altura do campo de pesquisa */
+    padding: 0 10px; /* Ajusta o padding para melhorar o layout */
+    margin-right: 10px;
+    box-sizing: border-box; /* Inclui padding e border no tamanho total do elemento */
+}
+
+/* Botões de pesquisa */
+.search-buttons {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap; /* Permite que os botões quebrem para a linha seguinte se necessário */
+}
+
+/* Estilo para o botão "x" */
+.clear-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 18px; /* Ajuste o tamanho do ícone se necessário */
+  }
+
+.search-button, .clear-button, .keyboard-button, .audio-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 15px; /* Ajuste o tamanho do ícone se necessário */
+}
+
+.search-button:hover, .clear-button:hover, .keyboard-button:hover, .audio-button:hover {
+    background-color: #00aeff;
+    border-radius: 5px;
+}
+
+/* 
+
+///// TECLADO VIRTUAL \\\\\ 
+
+**/
+
+
+/* Estilo para o contêiner da página */
+.container-virtual-keyboard {
+    width: 30%;
+    margin: 0 auto;
+  }
+
+/* Estilos para o teclado virtual */
+#virtual-keyboard {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #383737;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.virtual-keyboard .row {
+    margin-bottom: 5px;
+}
+
+.virtual-keyboard button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.virtual-keyboard button:active {
+    background-color: #ccc;
+}
+
+.virtual-keyboard button:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* Estilos para os resultados da pesquisa */
+#search-results {
+    margin-top: 20px;
+}
+
+.result-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.result-item a {
+    color: #000;
+    text-decoration: none;
+}
+
+.result-item a:hover {
+    text-decoration: underline;
+}
+
+.result-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.result-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.result-url {
+    font-size: 12px;
+    color: #006621;
+}
+
+.result-type {
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 1024px) {
+    .search-box {
+        width: 80%;
+    }
+    .search-input {
+        width: 70%;
+    }
+    .search-buttons {
+        margin: 10px 0;
+    }
+    .search-button, .clear-button, .keyboard-button, .audio-button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-box {
+        width: 100%;
+    }
+    .search-input {
+        width: 100%;
+    }
+    .search-buttons {
+        margin: 10px 0;
+    }
+    .search-button, .clear-button, .keyboard-button, .audio-button {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-box {
+        width: 100%;
+    }
+    .search-input {
+        width: 100%;
+    }
+    .search-buttons {
+        margin: 10px 0;
+    }
+    .search-button, .clear-button, .keyboard-button, .audio-button {
+        font-size: 10px;
+    }
+}
+
+/* Ajustes para telas muito menores */
+@media (max-width: 320px) {
+    .search-box {
+        width: 100%;
+    }
+    .search-input {
+        min-width: 100%; /* Ajusta a largura do campo de pesquisa */
+    }
+    .search-buttons {
+        flex-direction: row; /* Empilha os botões verticalmente a partir de 320px */
+        flex-wrap: wrap;
+        align-items: flex-start; /* Alinha os botões ao início do contêiner */
+    }
+    .search-button, .clear-button, .keyboard-button, .audio-button {
+        font-size: 10px; /* Ajusta o tamanho da fonte dos botões */
+    }
+}

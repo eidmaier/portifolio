@@ -1,0 +1,358 @@
+<!--
+* @FilePath              : collage/index.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collage Maker</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: #2a2a2a;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            overflow-y: auto;
+        }
+
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .template-thumb {
+            aspect-ratio: 1;
+            border: 2px solid #ffffff;
+            cursor: pointer;
+            padding: 5px;
+            background: #333;
+            display: grid;
+            gap: 2px;
+        }
+
+        .template-thumb:hover {
+            border-color: #007bff;
+        }
+
+        .template-thumb.active {
+            border-color: #007bff;
+            background: #2c2c2c;
+        }
+
+        .template-cell {
+            background: #d1d1d1;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .collage-container {
+            background: #e0e0e0;
+            border: 2px solid #e0e0e0;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(233, 229, 229, 0.2);
+            margin: 20px;
+            max-width: 800px;
+            width: 100%;
+            min-height: 400px;
+            position: relative;
+        }
+
+        .drop-zone {
+            border: 2px dashed #ccc;
+            padding: 10px;
+            margin: 5px;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f8f8;
+        }
+
+        .drop-zone.filled {
+            border: none;
+            padding: 0;
+        }
+
+        .drop-zone img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .grid {
+            display: grid;
+            gap: 10px;
+            height: 100%;
+        }
+
+        .download-btn {
+            padding: 10px 20px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .download-btn:hover {
+            background: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="templates-grid">
+            <div class="template-thumb" data-layout="2x2" style="grid-template: repeat(2, 1fr) / repeat(2, 1fr)">
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+            </div>
+            <!-- Layout 1x2 corrigido para mostrar células lado a lado -->
+            <div class="template-thumb" data-layout="1x2" style="grid-template: 1fr / repeat(2, 1fr)">
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+            </div>
+            <div class="template-thumb" data-layout="2x1" style="grid-template: repeat(2, 1fr) / 1fr">
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+            </div>
+            <div class="template-thumb" data-layout="1x3" style="grid-template: 1fr / repeat(3, 1fr)">
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+            </div>
+            <div class="template-thumb" data-layout="3x1" style="grid-template: repeat(3, 1fr) / 1fr">
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+            </div>
+            <div class="template-thumb" data-layout="1x4" style="grid-template: 1fr / repeat(4, 1fr)">
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+            </div>
+            <div class="template-thumb" data-layout="2x3" style="grid-template: repeat(3, 1fr) / repeat(2, 1fr)">
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+            </div>
+            <div class="template-thumb" data-layout="2x4" style="grid-template: repeat(4, 1fr) / repeat(2, 1fr)">
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+            </div>
+            <div class="template-thumb" data-layout="3x4" style="grid-template: repeat(4, 1fr) / repeat(3, 1fr)">
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+            </div>
+            <div class="template-thumb" data-layout="4x3" style="grid-template: repeat(3, 1fr) / repeat(4, 1fr)">
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+            </div>
+            <div class="template-thumb" data-layout="4x4" style="grid-template: repeat(4, 1fr) / repeat(4, 1fr)">
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+            </div>
+            <div class="template-thumb" data-layout="3x3" style="grid-template: repeat(3, 1fr) / repeat(3, 1fr)">
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+            </div>
+            <div class="template-thumb" data-layout="1x5" style="grid-template: 1fr / repeat(5, 1fr)">
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+            </div>
+            <div class="template-thumb" data-layout="5x1" style="grid-template: repeat(5, 1fr) / 1fr">
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+                <div class="template-cell"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="collage-container">
+            <div class="grid" id="grid-container"></div>
+        </div>
+        <button class="download-btn">Download Collage</button>
+    </div>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+        const layouts = {
+            '2x2': { rows: 2, cols: 2 },
+            '1x2': { rows: 1, cols: 2 },  // Corrigido para 1 linha e 2 colunas
+            '2x1': { rows: 2, cols: 1 },  // Adicionado layout vertical
+            '1x3': { rows: 1, cols: 3 },
+            '3x1': { rows: 3, cols: 1 },
+            '1x4': { rows: 1, cols: 4 },
+            '2x3': { rows: 3, cols: 2 },
+            '2x4': { rows: 4, cols: 2 },
+            '3x4': { rows: 4, cols: 3 },
+            '4x3': { rows: 3, cols: 4 },
+            '4x4': { rows: 4, cols: 4 },
+            '3x3': { rows: 3, cols: 3 },
+            '1x5': { rows: 1, cols: 5 },
+            '5x1': { rows: 5, cols: 1 }
+        };
+
+        let currentLayout = '2x2';
+
+        function createDropZones(layout) {
+            const container = document.getElementById('grid-container');
+            container.innerHTML = '';
+            container.style.gridTemplateColumns = `repeat(${layouts[layout].cols}, 1fr)`;
+            container.style.gridTemplateRows = `repeat(${layouts[layout].rows}, 1fr)`;
+
+            const totalZones = layouts[layout].rows * layouts[layout].cols;
+            for (let i = 0; i < totalZones; i++) {
+                const zone = document.createElement('div');
+                zone.className = 'drop-zone';
+                zone.innerHTML = 'Drop image here';
+                setupDropZone(zone);
+                container.appendChild(zone);
+            }
+        }
+
+        function setupDropZone(zone) {
+            zone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                zone.style.background = '#e6f3ff';
+            });
+
+            zone.addEventListener('dragleave', (e) => {
+                e.preventDefault();
+                zone.style.background = '#f8f8f8';
+            });
+
+            zone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                const file = e.dataTransfer.files[0];
+                if (file && file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        zone.innerHTML = `<img src="${e.target.result}">`;
+                        zone.classList.add('filled');
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+
+        document.querySelectorAll('.template-thumb').forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                currentLayout = thumb.dataset.layout;
+                document.querySelectorAll('.template-thumb').forEach(t => t.classList.remove('active'));
+                thumb.classList.add('active');
+                createDropZones(currentLayout);
+            });
+        });
+
+        document.querySelector('.download-btn').addEventListener('click', () => {
+            html2canvas(document.querySelector('.collage-container')).then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'collage.png';
+                link.href = canvas.toDataURL();
+                link.click();
+            });
+        });
+
+        document.querySelector('.collage-container').addEventListener('dblclick', () => {
+            document.querySelector('.download-btn').click();
+        });
+
+        // Initialize with default layout
+        createDropZones(currentLayout);
+    </script>
+</body>
+</html>

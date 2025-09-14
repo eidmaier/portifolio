@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>FreeFolio - Freelancer Portfolio Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- Navbar Start -->
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand ml-lg-3">
+            <h1 class="m-0 display-5"><span class="text-primary">Eid</span>Maier</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav m-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">Sobre</a>
+                <a href="#qualification" class="nav-item nav-link">Qualificação</a>
+                <a href="#skill" class="nav-item nav-link">Habilidade</a>
+                <a href="#projects" class="nav-item nav-link">Projeto</a>
+                <a href="#certifications" class="nav-item nav-link">Certificações</a>
+                <!-- <a href="#portfolio" class="nav-item nav-link">Portifólio</a> -->
+                <!-- <a href="#testimonial" class="nav-item nav-link">Revisar</a> -->
+                <!-- <a href="#blog" class="nav-item nav-link">Blog</a> -->
+                <a href="#contact" class="nav-item nav-link">Contato</a>
+            </div>
+            <a href="" class="btn btn-outline-primary d-none d-lg-block">Sobre Mim</a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Video Modal Start -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"
+                            allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+
+
+    <!-- Header Start -->
+    <!-- JavaScript Libraries -->
+
+    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
+                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/profile.jpg" alt="">
+                </div>
+                <div class="col-lg-7 text-center text-lg-left">
+                    <h3 class="text-white font-weight-normal mb-3">Sou</h3>
+                    <h1 class="display-3 text-uppercase mb-2"
+                        style="font-family: 'Poppins', Arial, sans-serif; font-weight: 700; color: transparent !important; -webkit-text-fill-color: transparent !important; -webkit-text-stroke: 2px #ffffff !important;">
+                        Eid Maier</h1>
+                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
+                    <div class="typed-text d-none">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps
+                        Developer</div>
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
+                        <a href="curriculo.html" target="_blank" class="btn btn-outline-light mr-5">Download CV</a>
+                        <!-- <button type="button" class="btn-play" data-toggle="modal"
+                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal"> 
+                            <span></span>
+                        </button>
+                        <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">Play Video</h5> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var typed = new Typed(".typed-text-output", {
+                strings: ["Web Designer", "Web Developer", "Front End Developer", "Apps Designer", "Apps Developer"],
+                typeSpeed: 50,
+                backSpeed: 25,
+                loop: true
+            });
+        });
+    </script>
+    <!-- Header End -->
+
+
+    <!-- Sobre Start -->
+    <div class="container-fluid py-5" id="about">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase"
+                    style="font-family:'Poppins',Arial,sans-serif;font-weight:800;color:transparent!important;-webkit-text-fill-color:transparent!important;-webkit-text-stroke:2px #dee2e6!important;font-size: 8.5rem;">
+                    Sobre</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Sobre Mim</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5 pb-4 pb-lg-0">
+                    <img class="img-fluid rounded w-100" src="img/about.jpg" alt="Eid Maier trabalhando">
+                </div>
+                <div class="col-lg-7">
+                    <h3 class="mb-4">Desenvolvedor Full Stack | Analista de Sistemas</h3>
+                    <p>Desenvolvedor apaixonado por tecnologia e inovação, com sólida formação em Análise e
+                        Desenvolvimento de Sistemas. Especialmente focado em criar soluções web modernas e responsivas
+                        que proporcionam excelente experiência do usuário.</p>
+                    <p>Tenho experiência prática no desenvolvimento de aplicações completas, desde o frontend até o
+                        backend, sempre priorizando código limpo, performance otimizada e boas práticas de
+                        desenvolvimento.</p>
+                    <div class="row mb-3">
+                        <div class="col-sm-6 py-2">
+                            <h6>Nome: <span class="text-secondary">Eid Maier</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Idade: <span class="text-secondary">48 anos</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Nível: <span class="text-secondary">Júnior</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Experiência: <span class="text-secondary">3 anos</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Telefone: <span class="text-secondary">(34) 9 8409-5662</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Email: <span class="text-secondary">eidmaier@yahoo.com</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Localização: <span class="text-secondary">Araguari-MG</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Disponibilidade: <span class="text-secondary">Imediata</span></h6>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-outline-primary mr-4">Contratar</a>
+                    <a href="#projects" class="btn btn-outline-primary">Ver Projetos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sobre End -->
+
+
+    <!-- Qualification Start -->
+    <div class="container-fluid py-5" id="qualification">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
+                <h1 class="display-1 text-uppercase"
+                    style="font-family:'Poppins',Arial,sans-serif;font-weight:800;color:transparent!important;-webkit-text-fill-color:transparent!important;-webkit-text-stroke:2px #dee2e6!important; font-size: 8.5rem;">
+                    Qualificação</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Educação & Experiência</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Minha Educação</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute"
+                                style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Análise e Desenvolvimento de Sistemas</h5>
+                            <p class="mb-2"><strong>IMEPAC Centro Universitário</strong> | <small>2018 - 2021</small>
+                            </p>
+                            <p>Graduação em Análise e Desenvolvimento de Sistemas com foco em programação, banco de
+                                dados, engenharia de software e desenvolvimento web. Durante o curso, trabalhei em
+                                projetos práticos que me deram experiência real com tecnologias como HTML, CSS,
+                                JavaScript, PHP e MySQL.</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute"
+                                style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Curso de Desenvolvimento Web</h5>
+                            <p class="mb-2"><strong>IMEPAC</strong> | <small>2020</small></p>
+                            <p>Curso completo de desenvolvimento web com mais de 50 horas de conteúdo, abordando HTML5,
+                                CSS3, JavaScript, Bootstrap, jQuery, PHP e MySQL.</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute"
+                                style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Diversas Linguagens</h5>
+                            <p class="mb-2"><strong>IMEPAC</strong> | <small>2021</small></p>
+                            <p>Curso de criação de temas e plugins, abordando desenvolvimento personalizado e técnicas
+                                avançadas para criação de sites, aplicativos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Minha Experiência</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute"
+                                style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Desenvolvedor Web Freelancer</h5>
+                            <p class="mb-2"><strong>Autônomo</strong> | <small>2019 - Atual</small></p>
+                            <p>Desenvolvimento de sites institucionais, landing pages e e-commerces para clientes de
+                                diversos segmentos. Criação de layouts responsivos, otimização para mecanismos de busca
+                                e implementação de funcionalidades personalizadas com JavaScript e PHP.</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute"
+                                style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Web Designer</h5>
+                            <p class="mb-2"><strong>Projetos Pessoais</strong> | <small>2018 - Atual</small></p>
+                            <p>Criação de interfaces modernas e intuitivas com foco na experiência do usuário.
+                                Desenvolvimento de designs responsivos que funcionam perfeitamente em todos os
+                                dispositivos e tamanhos de tela.</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute"
+                                style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Estágio em Desenvolvimento Web</h5>
+                            <p class="mb-2"><strong>IMEPAC</strong> | <small>2020 - 3 meses</small></p>
+                            <p>Estágio focado no desenvolvimento de aplicações web utilizando HTML, CSS, JavaScript e
+                                PHP com framework CakePHP. Participei ativamente do desenvolvimento de sistemas internos
+                                da instituição.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Qualification End -->
+
+
+    <!-- Habilidades Start -->
+    <div class="container-fluid py-5" id="skill">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase"
+                    style="font-family:'Poppins',Arial,sans-serif;font-weight:800;color:transparent!important;-webkit-text-fill-color:transparent!important;-webkit-text-stroke:2px #dee2e6!important;font-size: 8.5rem;">
+                    Skills</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Habilidades Técnicas</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">HTML5 & Semântica</h6>
+                            <h6 class="font-weight-bold">90%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="background-color: #e34c26; width: 90%"
+                                aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small class="text-muted">Estruturação semântica, acessibilidade, SEO on-page</small>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">CSS3 & Responsividade</h6>
+                            <h6 class="font-weight-bold">50%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="background-color: #264de4; width: 50%"
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small class="text-muted">Flexbox, Grid, animations, SASS/SCSS, mobile-first</small>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">JavaScript ES6+</h6>
+                            <h6 class="font-weight-bold">30%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="background-color: #f7df1e; width: 30%"
+                                aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small class="text-muted">DOM manipulation, Fetch API, async/await, modules</small>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">PHP & Backend</h6>
+                            <h6 class="font-weight-bold">30%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="background-color: #777bb4; width: 30%"
+                                aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small class="text-muted">OOP, MVC pattern, APIs RESTful, CakePHP framework</small>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">React & Angular</h6>
+                            <h6 class="font-weight-bold">30%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="background-color: #fbd261; width: 30%"
+                                aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small class="text-muted">Components, hooks, state management, SPAs</small>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">React Native</h6>
+                            <h6 class="font-weight-bold">30%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="background-color: #61dafb; width: 30%"
+                                aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small class="text-muted">Mobile development, navigation, native modules</small>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">MySQL & Banco de Dados</h6>
+                            <h6 class="font-weight-bold">40%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="background-color: #44a16b; width: 40%"
+                                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small class="text-muted">Modelagem, queries otimizadas, stored procedures</small>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">WordPress & CMS</h6>
+                            <h6 class="font-weight-bold">60%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="background-color: #21759b; width: 60%"
+                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small class="text-muted">Temas personalizados, plugins, WooCommerce, ACF</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h4 class="mb-4 text-center">Competências Profissionais</h4>
+                    <div class="row">
+                        <div class="col-md-3 text-center mb-4">
+                            <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                            <h6>Trabalho em Equipe</h6>
+                            <p class="text-muted">Colaboração efetiva em projetos multidisciplinares</p>
+                        </div>
+                        <div class="col-md-3 text-center mb-4">
+                            <i class="fas fa-clock fa-3x text-primary mb-3"></i>
+                            <h6>Gestão de Tempo</h6>
+                            <p class="text-muted">Entrega de projetos dentro do prazo estabelecido</p>
+                        </div>
+                        <div class="col-md-3 text-center mb-4">
+                            <i class="fas fa-lightbulb fa-3x text-primary mb-3"></i>
+                            <h6>Resolução de Problemas</h6>
+                            <p class="text-muted">Análise crítica e soluções criativas</p>
+                        </div>
+                        <div class="col-md-3 text-center mb-4">
+                            <i class="fas fa-graduation-cap fa-3x text-primary mb-3"></i>
+                            <h6>Aprendizado Contínuo</h6>
+                            <p class="text-muted">Sempre atualizando conhecimentos em novas tecnologias</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Habilidades End -->
+
+
+    <!-- Projetos Start -->
+    <div class="container-fluid pt-5" id="projects">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase"
+                    style="font-family:'Poppins',Arial,sans-serif;font-weight:800;color:transparent!important;-webkit-text-fill-color:transparent!important;-webkit-text-stroke:2px #dee2e6!important;font-size: 8.5rem;">
+                    Projetos</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Meus Projetos</h1>
+            </div>
+            <div class="row pb-3">
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fas fa-laptop service-icon bg-primary text-white mr-3"
+                            style="font-size: 2rem; padding: 20px; border-radius: 50%;"></i>
+                        <h4 class="font-weight-bold m-0">Layout Responsivo Base</h4>
+                    </div>
+                    <p><strong>Tecnologias:</strong> HTML5, CSS3, Flexbox, Media Queries<br>
+                        Projeto base de site institucional com layout completamente responsivo, otimizado para mobile,
+                        tablet e desktop. Implementação de grid fluido e hierarquia visual clara.</p>
+                    <div class="mb-3">
+                        <span class="badge badge-primary mr-1">HTML5</span>
+                        <span class="badge badge-secondary mr-1">CSS3</span>
+                        <span class="badge badge-info mr-1">Flexbox</span>
+                        <span class="badge badge-warning mr-1">Media Queries</span>
+                    </div>
+                    <a class="border-bottom border-primary text-decoration-none" href="projetos/base/index.html"
+                        target="_blank">Ver Demo <i class="fas fa-external-link-alt ml-1"></i></a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fas fa-image service-icon bg-primary text-white mr-3"
+                            style="font-size: 2rem; padding: 20px; border-radius: 50%;"></i>
+                        <h4 class="font-weight-bold m-0">Collage de Imagens Dinâmica</h4>
+                    </div>
+                    <p><strong>Tecnologias:</strong> HTML5, CSS3, JavaScript (ES6), Grid Layout<br>
+                        Interface interativa de collage que reorganiza automaticamente imagens de diferentes tamanhos em
+                        um layout elegante e responsivo, com animações suaves ao carregar.</p>
+                    <div class="mb-3">
+                        <span class="badge badge-primary mr-1">HTML5</span>
+                        <span class="badge badge-secondary mr-1">CSS3</span>
+                        <span class="badge badge-danger mr-1">JavaScript</span>
+                        <span class="badge badge-info mr-1">CSS Grid</span>
+                    </div>
+                    <a class="border-bottom border-primary text-decoration-none" href="projetos/collage/index.html"
+                        target="_blank">Ver Demo <i class="fas fa-external-link-alt ml-1"></i></a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fas fa-mobile-alt service-icon bg-primary text-white mr-3"
+                            style="font-size: 2rem; padding: 20px; border-radius: 50%;"></i>
+                        <h4 class="font-weight-bold m-0">Header Responsivo com Menu Mobile</h4>
+                    </div>
+                    <p><strong>Tecnologias:</strong> HTML5, CSS3, JavaScript, Bootstrap<br>
+                        Header adaptativo que alterna entre menu horizontal (desktop) e hamburger menu (mobile) a partir
+                        de @media 768px. Com transição suave e navegação acessível.</p>
+                    <div class="mb-3">
+                        <span class="badge badge-primary mr-1">HTML5</span>
+                        <span class="badge badge-secondary mr-1">CSS3</span>
+                        <span class="badge badge-danger mr-1">JavaScript</span>
+                        <span class="badge badge-info mr-1">Bootstrap</span>
+                    </div>
+                    <a class="border-bottom border-primary text-decoration-none" href="projetos/header/index.html"
+                        target="_blank">Ver Demo <i class="fas fa-external-link-alt ml-1"></i></a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fas fa-user-edit service-icon bg-primary text-white mr-3"
+                            style="font-size: 2rem; padding: 20px; border-radius: 50%;"></i>
+                        <h4 class="font-weight-bold m-0">Sistema de Crop de Avatar</h4>
+                    </div>
+                    <p><strong>Tecnologias:</strong> HTML5, JavaScript, Cropper.js, CSS Animations<br>
+                        Sistema integrado de edição de avatar: menu circular clicável abre modal com cortador de imagem
+                        (cropper), permitindo recorte, redimensionamento e salvamento direto em dois círculos de
+                        exibição.</p>
+                    <div class="mb-3">
+                        <span class="badge badge-primary mr-1">HTML5</span>
+                        <span class="badge badge-danger mr-1">JavaScript</span>
+                        <span class="badge badge-success mr-1">Cropper.js</span>
+                        <span class="badge badge-info mr-1">CSS Animations</span>
+                    </div>
+                    <a class="border-bottom border-primary text-decoration-none" href="projetos/menuc_user_cropp.html"
+                        target="_blank">Ver Demo <i class="fas fa-external-link-alt ml-1"></i></a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fas fa-clipboard-list service-icon bg-primary text-white mr-3"
+                            style="font-size: 2rem; padding: 20px; border-radius: 50%;"></i>
+                        <h4 class="font-weight-bold m-0">Clipboard Dinâmico</h4>
+                    </div>
+                    <p><strong>Tecnologias:</strong> JavaScript, Clipboard API, CSS Animations<br>
+                        Interface intuitiva com botão de cópia que flutua e acompanha dinamicamente o conteúdo
+                        selecionado. Inclui feedback visual, notificação toast e tratamento de erros para navegadores
+                        antigos.</p>
+                    <div class="mb-3">
+                        <span class="badge badge-danger mr-1">JavaScript</span>
+                        <span class="badge badge-info mr-1">Clipboard API</span>
+                        <span class="badge badge-warning mr-1">CSS Animations</span>
+                    </div>
+                    <a class="border-bottom border-primary text-decoration-none" href="projetos/clipboard.html"
+                        target="_blank">Ver Demo <i class="fas fa-external-link-alt ml-1"></i></a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fas fa-palette service-icon bg-primary text-white mr-3"
+                            style="font-size: 2rem; padding: 20px; border-radius: 50%;"></i>
+                        <h4 class="font-weight-bold m-0">Sistema de Temas (Dark/Light)</h4>
+                    </div>
+                    <p><strong>Tecnologias:</strong> CSS Variables, JavaScript, LocalStorage<br>
+                        Implementação completa de tema escuro e claro com transições suaves. Usa variáveis CSS para
+                        controle centralizado de cores e armazena a preferência do usuário no localStorage para manter o
+                        estado entre sessões.</p>
+                    <div class="mb-3">
+                        <span class="badge badge-info mr-1">CSS Variables</span>
+                        <span class="badge badge-danger mr-1">JavaScript</span>
+                        <span class="badge badge-secondary mr-1">LocalStorage</span>
+                    </div>
+                    <a class="border-bottom border-primary text-decoration-none" href="projetos/theme/index.html"
+                        target="_blank">Ver Demo <i class="fas fa-external-link-alt ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projetos End -->
+
+
+    <!-- Certificações Start -->
+    <div class="container-fluid py-5" id="certifications">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase"
+                    style="font-family:'Poppins',Arial,sans-serif;font-weight:800;color:transparent!important;-webkit-text-fill-color:transparent!important;-webkit-text-stroke:2px #dee2e6!important;font-size: 8.5rem;">
+                    Certificações</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Certificações & Cursos</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="bg-light rounded p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-certificate text-primary fa-2x mr-3"></i>
+                            <div>
+                                <h5 class="font-weight-bold mb-1">Desenvolvedor Web Full Stack</h5>
+                                <p class="text-muted mb-0">IMEPAC Centro Universitário • 2020</p>
+                            </div>
+                        </div>
+                        <p>Certificação em desenvolvimento completo de aplicações web, cobrindo frontend, backend e
+                            banco de dados com 50+ horas de conteúdo prático.</p>
+                        <div class="mb-2">
+                            <span class="badge badge-primary mr-1">HTML5</span>
+                            <span class="badge badge-info mr-1">CSS3</span>
+                            <span class="badge badge-warning mr-1">JavaScript</span>
+                            <span class="badge badge-secondary mr-1">PHP</span>
+                            <span class="badge badge-success mr-1">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="bg-light rounded p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-code text-primary fa-2x mr-3"></i>
+                            <div>
+                                <h5 class="font-weight-bold mb-1">Programação Avançada</h5>
+                                <p class="text-muted mb-0">IMEPAC • 2021</p>
+                            </div>
+                        </div>
+                        <p>Especialização em múltiplas linguagens e frameworks modernos, incluindo desenvolvimento
+                            mobile e arquitetura de software.</p>
+                        <div class="mb-2">
+                            <span class="badge badge-danger mr-1">React</span>
+                            <span class="badge badge-primary mr-1">Angular</span>
+                            <span class="badge badge-info mr-1">React Native</span>
+                            <span class="badge badge-dark mr-1">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="bg-light rounded p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fab fa-wordpress text-primary fa-2x mr-3"></i>
+                            <div>
+                                <h5 class="font-weight-bold mb-1">WordPress Development</h5>
+                                <p class="text-muted mb-0">Autodidático • 2019-2021</p>
+                            </div>
+                        </div>
+                        <p>Desenvolvimento de temas e plugins personalizados, otimização de performance e implementação
+                            de e-commerce com WooCommerce.</p>
+                        <div class="mb-2">
+                            <span class="badge badge-info mr-1">WordPress</span>
+                            <span class="badge badge-success mr-1">WooCommerce</span>
+                            <span class="badge badge-warning mr-1">ACF</span>
+                            <span class="badge badge-secondary mr-1">Custom Posts</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="bg-light rounded p-4 h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-database text-primary fa-2x mr-3"></i>
+                            <div>
+                                <h5 class="font-weight-bold mb-1">Banco de Dados & APIs</h5>
+                                <p class="text-muted mb-0">Estudos Complementares • 2020-2024</p>
+                            </div>
+                        </div>
+                        <p>Especialização em modelagem de dados, otimização de queries, desenvolvimento de APIs RESTful
+                            e integração com serviços externos.</p>
+                        <div class="mb-2">
+                            <span class="badge badge-primary mr-1">MySQL</span>
+                            <span class="badge badge-success mr-1">REST API</span>
+                            <span class="badge badge-info mr-1">JSON</span>
+                            <span class="badge badge-warning mr-1">AJAX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Próximos Passos -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="bg-primary text-white rounded p-4">
+                        <h4 class="mb-3"><i class="fas fa-rocket mr-2"></i>Próximos Objetivos de Aprendizado</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check text-warning mr-2"></i>Certificação AWS
+                                        Cloud Practitioner</li>
+                                    <li class="mb-2"><i class="fas fa-check text-warning mr-2"></i>Vue.js Framework
+                                        Mastery</li>
+                                    <li class="mb-2"><i class="fas fa-check text-warning mr-2"></i>Docker &
+                                        Containerização</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check text-warning mr-2"></i>TypeScript Advanced
+                                    </li>
+                                    <li class="mb-2"><i class="fas fa-check text-warning mr-2"></i>GraphQL & Apollo</li>
+                                    <li class="mb-2"><i class="fas fa-check text-warning mr-2"></i>DevOps & CI/CD</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Certificações End -->
+
+
+    <!-- Portfolio Start
+    <div class="container-fluid pt-5 pb-3" id="portfolio">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1><h1 class="display-1 text-uppercase" style="font-family:'Poppins',Arial,sans-serif;font-weight:800;color:transparent!important;-webkit-text-fill-color:transparent!important;-webkit-text-stroke:2px #dee2e6!important;font-size: 8.5rem;">Galeria</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Meu Portifólio</h1>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mb-2">
+                    <ul class="list-inline mb-4" id="portfolio-flters">
+                        <li class="btn btn-sm btn-outline-primary m-1 active" data-filter="*">Todos</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Design</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Desenvolvedor</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Marketing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row portfolio-container">
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-1.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-2.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-3.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-4.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-4.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-5.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-5.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/portfolio-6.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/portfolio-6.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    Portfolio End -->
+
+
+    <!-- Testimonial Start
+    <div class="container-fluid py-5" id="testimonial">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1><h1 class="display-1 text-uppercase" style="font-family:'Poppins',Arial,sans-serif;font-weight:800;color:transparent!important;-webkit-text-fill-color:transparent!important;-webkit-text-stroke:2px #dee2e6!important;font-size: 8.5rem;">Cliente</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Os Clientes Dizem</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos.
+                                Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet
+                                accusam amet eirmod eos, labore diam clita</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-1.jpg"
+                                style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos.
+                                Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet
+                                accusam amet eirmod eos, labore diam clita</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-2.jpg"
+                                style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos.
+                                Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet
+                                accusam amet eirmod eos, labore diam clita</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-3.jpg"
+                                style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">Client Name</h5>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    Testimonial End -->
+
+
+    <!-- Blog Start
+    <div class="container-fluid pt-5" id="blog">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1><h1 class="display-1 text-uppercase" style="font-family:'Poppins',Arial,sans-serif;font-weight:800;color:transparent!important;-webkit-text-fill-color:transparent!important;-webkit-text-stroke:2px #dee2e6!important;font-size: 8.5rem;">Blog</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Blog Mais Recente</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-5">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-100" src="img/blog-1.jpg" alt="">
+                        <div class="blog-date">
+                            <h4 class="font-weight-bold mb-n1">01</h4>
+                            <small class="text-white text-uppercase">Jan</small>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum
+                    </h5>
+                    <a class="btn btn-sm btn-outline-primary py-2" href="">Ler Mais</a>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-100" src="img/blog-2.jpg" alt="">
+                        <div class="blog-date">
+                            <h4 class="font-weight-bold mb-n1">01</h4>
+                            <small class="text-white text-uppercase">Jan</small>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum
+                    </h5>
+                    <a class="btn btn-sm btn-outline-primary py-2" href="">Ler Mais</a>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-100" src="img/blog-3.jpg" alt="">
+                        <div class="blog-date">
+                            <h4 class="font-weight-bold mb-n1">01</h4>
+                            <small class="text-white text-uppercase">Jan</small>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum
+                    </h5>
+                    <a class="btn btn-sm btn-outline-primary py-2" href="">Ler Mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+   Blog End -->
+
+
+    <!-- Contato Start -->
+    <div class="container-fluid py-5" id="contact">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase"
+                    style="font-family:'Poppins',Arial,sans-serif;font-weight:800;color:transparent!important;-webkit-text-fill-color:transparent!important;-webkit-text-stroke:2px #dee2e6!important;font-size: 8.5rem;">
+                    Contato</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Vamos Trabalhar Juntos</h1>
+            </div>
+
+            <!-- Informações de Contato -->
+            <div class="row mb-5">
+                <div class="col-lg-4 mb-4">
+                    <div class="bg-light rounded p-4 text-center h-100">
+                        <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
+                        <h5 class="font-weight-bold">Localização</h5>
+                        <p class="mb-0">Araguari, Minas Gerais<br>Disponível para trabalho presencial e remoto</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="bg-light rounded p-4 text-center h-100">
+                        <i class="fas fa-phone fa-3x text-primary mb-3"></i>
+                        <h5 class="font-weight-bold">Telefone</h5>
+                        <p class="mb-0">(34) 9 8409-5662<br>WhatsApp disponível</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="bg-light rounded p-4 text-center h-100">
+                        <i class="fas fa-envelope fa-3x text-primary mb-3"></i>
+                        <h5 class="font-weight-bold">Email</h5>
+                        <p class="mb-0">eidmaier@yahoo.com<br>Resposta em até 24h</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form text-center">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <div class="form-row">
+                                <div class="control-group col-sm-6">
+                                    <input type="text" class="form-control p-4" id="name" placeholder="Seu Nome *"
+                                        required="required"
+                                        data-validation-required-message="Por favor, insira seu nome" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group col-sm-6">
+                                    <input type="email" class="form-control p-4" id="email" placeholder="Seu Email *"
+                                        required="required"
+                                        data-validation-required-message="Por favor, insira um email válido" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="control-group col-sm-6">
+                                    <input type="text" class="form-control p-4" id="company"
+                                        placeholder="Empresa/Organização"
+                                        data-validation-required-message="Nome da empresa" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group col-sm-6">
+                                    <select class="form-control p-4" id="project-type">
+                                        <option value="">Tipo de Projeto</option>
+                                        <option value="website">Website Institucional</option>
+                                        <option value="ecommerce">E-commerce</option>
+                                        <option value="webapp">Aplicação Web</option>
+                                        <option value="mobile">App Mobile</option>
+                                        <option value="maintenance">Manutenção/Atualização</option>
+                                        <option value="consulting">Consultoria</option>
+                                        <option value="other">Outro</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control p-4" id="subject" placeholder="Assunto *"
+                                    required="required"
+                                    data-validation-required-message="Por favor, insira o assunto" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control py-3 px-4" rows="6" id="message"
+                                    placeholder="Descreva seu projeto, prazos, orçamento e qualquer informação relevante *"
+                                    required="required"
+                                    data-validation-required-message="Por favor, descreva seu projeto"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-primary btn-lg px-5" type="submit"
+                                    id="sendMessageButton">
+                                    <i class="fas fa-paper-plane mr-2"></i>Enviar Mensagem
+                                </button>
+                            </div>
+                            <p class="text-muted mt-3">* Campos obrigatórios</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="bg-primary text-white rounded p-5 text-center">
+                        <h3 class="mb-3">Pronto para elevar seu projeto ao próximo nível?</h3>
+                        <p class="lead mb-4">Com experiência em desenvolvimento web completo — do design à implementação
+                            — estou comprometido em transformar suas ideias em soluções digitais ágeis, escaláveis e com
+                            foco na experiência do usuário. Vamos conversar sobre como posso agregar valor ao seu
+                            projeto, time ou negócio.</p>
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <a href="tel:+5534984095662" class="btn btn-outline-light mr-3 mb-2">
+                                <i class="fas fa-phone mr-2"></i>Ligar Agora
+                            </a>
+                            <a href="https://wa.me/5534984095662" class="btn btn-outline-light mr-3 mb-2"
+                                target="_blank">
+                                <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+                            </a>
+                            <a href="mailto:eidmaier@yahoo.com" class="btn btn-outline-light mb-2">
+                                <i class="fas fa-envelope mr-2"></i>Enviar Email
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contato End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-light btn-social mr-2" href="https://linkedin.com/in/eidmaier" target="_blank"
+                    title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://github.com/eidmaier" target="_blank"
+                    title="GitHub"><i class="fab fa-github"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://wa.me/5534984095662" target="_blank"
+                    title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a class="btn btn-light btn-social" href="mailto:eidmaier@yahoo.com" title="Email"><i
+                        class="fas fa-envelope"></i></a>
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+                <a class="text-white" href="#about">Sobre</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#projects">Projetos</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#certifications">Certificações</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#skill">Habilidades</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#contact">Contato</a>
+            </div>
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">2021 Eid Maier</a>. Todos os direitos
+                reservados.
+                <br>Analista e Desenvolvedor de Sistemas | Araguari-MG
+            </p>
+            <small class="text-light">Template adaptado de <a class="text-light" href="https://htmlcodex.com"
+                    target="_blank">HTML Codex</a></small>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <!-- Contato Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
